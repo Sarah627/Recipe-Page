@@ -144,19 +144,66 @@ section li span {
   color: var(--Brown-800);
 }
 
+/* Instructions section */
+
+ol {
+  margin-top: 15px;
+  counter-reset: counter;
+  padding-left: 0;
+}
+
+ol li {
+  margin-left: 10px;
+  position: relative;
+  left: 45px;
+  line-height: 25px;
+}
+
+#instructions ol li::before {
+  counter-increment: counter;
+  content: counter(counter) " .";
+  color: var(--Brown-800);
+  padding-right: 25px;
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-bold);
+  position: absolute;
+  left: -45px;
+}
+
+/* Nutrition section */
+
+#nutrition p {
+  margin-top: 15px;
+}
+
 table {
-  margin: 30px auto;
+  margin: 15px auto;
   width: 100%;
+  border-collapse: collapse;
 }
 
 tr {
-  border-bottom: 3px solid var(--Stone-100);
+  border-bottom: 1px solid var(--Stone-150);
   height: 50px;
 }
+td {
+  padding-left: 30px;
+}
 
+tr td:first-child {
+  font-family: var(--ff-outfit);
+  color: var(--Stone-600);
+}
 tr td:nth-child(2) {
   color: var(--Brown-800);
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-bold);
 }
+
+/* Media Queries */
+
+/* desktop size */
+
 @media (min-width: 1440px) {
   html {
     background-color: var(--Stone-100);
@@ -167,3 +214,5 @@ tr td:nth-child(2) {
     margin: 30px auto;
   }
 }
+
+/* mobile size */

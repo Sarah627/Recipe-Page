@@ -26,18 +26,23 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style-type: none;
 }
+
+/* body */
 
 body {
   background-color: var(--White);
   border-radius: 20px;
 }
 
+/* general styling */
+
 main,
 section {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 40px;
   margin: 20px 20px;
 }
 
@@ -55,51 +60,88 @@ section li {
   color: var(--Stone-600);
 }
 
-section li::marker {
-  color: var(--Brown-800);
-}
-
 hr {
   margin: 30px 0;
+  height: 0.1px;
+  background-color: var(--Stone-150);
+  border: none;
 }
 img {
   display: block;
   border-radius: 15px;
 }
 
+h1,
+h3 {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-regular);
+}
+
 h1 {
-  font: var(--Young-Serif-400);
-  font-size: 48px;
-  margin: 30px 0px;
+  color: var(--Stone-900);
+  font-size: 40px;
+  margin: 30px 0 20px 0;
+}
+h4 {
+  font-size: 20px;
+}
+ul {
+  margin-top: 1%;
+  padding: 0 5px;
+}
+
+li {
+  font-family: var(--ff-outfit);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.75rem;
+  color: var(--Stone-600);
 }
 
 p,
 #preparation-time {
-  font: var(--Outfit-400);
-  margin-top: 30px;
-  font-size: var(--font-size);
+  font-family: var(--ff-outfit);
 }
 
+/* preparation time section */
+
 #preparation-time {
+  margin-top: 8%;
   margin-left: 30px;
 }
 
-#preparation-time h4 {
+#preparation-time h4,
+#preparation-time li::before {
   color: var(--Rose-800);
 }
 
 #preparation-time li {
   color: var(--Stone-600);
+  margin-top: 20px;
 }
 
-#preparation-time li::marker {
-  color: var(--Rose-800);
+#preparation-time li::before {
+  content: "●";
+  font-family: var(--ff-outfit);
+  font-size: 10px;
+  margin-right: 25px;
 }
 
 #preparation-time li span,
 section li span {
-  font: var(--Outfit-700);
-  color: var(--Stone-900);
+  font-weight: var(--fw-bold);
+}
+
+/* Ingredients section */
+
+#ingredients ul li::before {
+  content: "●";
+  font-family: var(--ff-outfit);
+  font-size: 10px;
+  margin-right: 40px;
+  color: var(--Brown-800);
 }
 
 table {
@@ -121,7 +163,7 @@ tr td:nth-child(2) {
   }
 
   body {
-    width: 65%;
+    width: 50%;
     margin: 30px auto;
   }
 }

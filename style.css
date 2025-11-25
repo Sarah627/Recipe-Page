@@ -16,3 +16,12 @@
   --Rose-800: hsl(332, 51%, 32%);
   --Rose-50: hsl(330, 100%, 98%);
 }
+
+/* CSS reset */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+  list-style-type: none;
+}

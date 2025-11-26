@@ -38,12 +38,22 @@ body {
 
 /* general styling */
 
+#img-container img {
+  display: block;
+  width: 100%;
+}
+
 main,
-section {
+section,
+#img-container {
   display: flex;
   flex-direction: column;
-  padding: 25px;
-  margin: 20px 20px;
+  padding: 30px;
+}
+
+#img-container {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 section {
@@ -65,9 +75,6 @@ hr {
   height: 0.1px;
   background-color: var(--Stone-150);
   border: none;
-}
-img {
-  display: block;
 }
 
 h1,
@@ -108,11 +115,9 @@ p,
 
 #preparation-time {
   background-color: var(--Rose-50);
-  margin-top: 8%;
-  margin-left: 30px;
+  margin: 8% 0px 2% 30px;
   border-radius: 15px;
-  padding: 10px;
-  padding-top: 20px;
+  padding: 30px;
 }
 
 #preparation-time h4,
@@ -237,6 +242,9 @@ tr td:nth-child(2) {
     margin: 85px auto;
     padding-top: 3px;
   }
+  main {
+    padding: 0 35px;
+  }
   img {
     border-radius: 15px;
   }
@@ -250,5 +258,9 @@ tr td:nth-child(2) {
 @media (min-width: 375px) {
   h1 {
     font-size: 30px;
+  }
+
+  main {
+    margin: 0;
   }
 }

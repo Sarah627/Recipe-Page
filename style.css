@@ -93,11 +93,22 @@ h4 {
 }
 ul {
   margin-top: 1%;
-  padding: 0 5px;
+  padding: 0 20px;
 }
 
 li {
+  position: relative;
+  left: 40px;
   font-family: var(--ff-outfit);
+}
+
+li::before {
+  content: "●";
+  line-height: 30px;
+  font-family: var(--ff-outfit);
+  font-size: 10px;
+  position: absolute;
+  left: -40px;
 }
 
 p {
@@ -131,9 +142,6 @@ p,
 }
 
 #preparation-time li::before {
-  content: "●";
-  font-family: var(--ff-outfit);
-  font-size: 10px;
   margin-right: 25px;
 }
 
@@ -145,9 +153,6 @@ section li span {
 /* Ingredients section */
 
 #ingredients ul li::before {
-  content: "●";
-  font-family: var(--ff-outfit);
-  font-size: 10px;
   margin-right: 40px;
   color: var(--Brown-800);
 }
@@ -162,8 +167,7 @@ ol {
 
 ol li {
   margin-left: 10px;
-  position: relative;
-  left: 45px;
+
   line-height: 25px;
 }
 
@@ -174,8 +178,7 @@ ol li {
   padding-right: 25px;
   font-family: var(--ff-outfit);
   font-weight: var(--fw-bold);
-  position: absolute;
-  left: -45px;
+  font-size: 16px;
 }
 
 /* Nutrition section */
@@ -230,8 +233,32 @@ tr td:nth-child(2) {
 
 /* Media Queries */
 
-/* desktop size */
+/* mobile size */
+@media (min-width: 375px) {
+  #img-container {
+    padding: 0;
+  }
+  main {
+    padding-top: 0;
+  }
 
+  #preparation-time {
+    margin: 20px 0;
+  }
+
+  #preparation-time h4 {
+    font-weight: var(--fw-semibold);
+  }
+  h1 {
+    font-size: 30px;
+  }
+
+  span {
+    font-weight: var(--fw-regular);
+  }
+}
+
+/* desktop size */
 @media (min-width: 1440px) {
   html {
     background-color: var(--Stone-100);
@@ -245,22 +272,15 @@ tr td:nth-child(2) {
   main {
     padding: 0 35px;
   }
-  img {
+  #img-container img {
     border-radius: 15px;
+  }
+
+  #img-container {
+    padding: 30px;
   }
 
   h1 {
     font-size: 40px;
-  }
-}
-
-/* mobile size */
-@media (min-width: 375px) {
-  h1 {
-    font-size: 30px;
-  }
-
-  main {
-    margin: 0;
   }
 }

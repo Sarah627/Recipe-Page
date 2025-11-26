@@ -208,6 +208,14 @@ tr td:nth-child(2) {
   text-align: center;
 }
 
+.attribution a {
+  color: var(--Rose-800);
+}
+
+.attribution a:visited {
+  color: var(--Brown-800);
+}
+
 /* Media Queries */
 
 /* desktop size */

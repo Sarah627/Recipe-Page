@@ -47,7 +47,7 @@ section {
 }
 
 section {
-  padding: 0 50px;
+  padding: 0 70px 0 50px;
 }
 
 section h3 {
@@ -198,6 +198,14 @@ tr td:nth-child(2) {
   color: var(--Brown-800);
   font-family: var(--ff-outfit);
   font-weight: var(--fw-bold);
+}
+
+/* attibution class */
+
+.attribution {
+  margin: 10px auto;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 /* Media Queries */

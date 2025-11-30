@@ -88,7 +88,7 @@ h1 {
 
   margin: 30px 0 20px 0;
 }
-#preparation-time h3 {
+h2 {
   font-size: 20px;
   font-family: var(--ff-outfit);
   font-weight: var(--fw-semibold);
@@ -133,7 +133,7 @@ p,
   padding: 30px;
 }
 
-#preparation-time h3,
+#preparation-time h2,
 #preparation-time li::before {
   color: var(--Rose-800);
 }
